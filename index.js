@@ -45,7 +45,7 @@ const questions = [
         message: 'What licence does it use?',
         name: 'license',
         choices: [
-            "IBM",
+            "Boost",
             "ISC",
             "MIT"
         ]},
