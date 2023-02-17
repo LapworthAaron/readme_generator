@@ -90,11 +90,12 @@ function init() {
     let responseObj = {};
     inquirer
         .prompt(questions)
+
         .then((response) => {
             responseObj = response;
             response.licenseFull = getLicense(response.license);
             response.licenseBadge = badgeLicense(response.license);
-            writeToFile("readme_test.md",generateMarkdown(responseObj));
+            writeToFile(`readme_${response.title.replace(/ /g,"_")}.md`,generateMarkdown(responseObj));
         });
 }
 
@@ -118,11 +119,11 @@ const getLicense = repLicense => licenses[repLicense];
 const badgeLicense = license => {
     switch (license) {
          case "Boost":
-            return "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-green.svg)](https://https://opensource.org/license/bsl1-0-html)";
+            return "[![License: IPL 1.0](https://img.shields.io/badge/License-BSL_1.0-green.svg)](https://opensource.org/license/bsl1-0-html/)";
         case "ISC":
-            return "[![License: ISC](https://img.shields.io/badge/License-ISC-green.svg)](https://opensource.org/licenses/ISC)"
+            return "[![License: ISC](https://img.shields.io/badge/License-ISC-green.svg)](https://opensource.org/licenses/isc-license-txt/)"
         case "MIT":
-            return "[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)";
+            return "[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/mit/)";
         case "none":
             return "";
     }
