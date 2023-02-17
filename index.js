@@ -45,7 +45,6 @@ const questions = [
         message: 'What licence does it use?',
         name: 'license',
         choices: [
-            "Eclipse",
             "IBM",
             "ISC",
             "MIT"
@@ -95,7 +94,6 @@ function init() {
             responseObj = response;
             response.licenseFull = getLicense(response.license);
             response.licenseBadge = badgeLicense(response.license);
-            console.log(response);
             writeToFile("readme_test.md",generateMarkdown(responseObj));
         });
 }
@@ -117,7 +115,7 @@ const licenses = {
 const getLicense = repLicense => licenses[repLicense];
 
 // function to get a badge for each license
-function badgeLicense(license) {
+const badgeLicense = license => {
     switch (license) {
          case "Boost":
             return "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-green.svg)](https://https://opensource.org/license/bsl1-0-html)";
