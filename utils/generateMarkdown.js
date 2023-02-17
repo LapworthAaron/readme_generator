@@ -32,8 +32,7 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions <a name="questions"></a>
-  You can reach me at <a href="https://github.com/${data.questions}">${data.questions}</a>
-
+  You can reach me at [${data.questions}](https://github.com/${data.questions})
 `;
 }
 
