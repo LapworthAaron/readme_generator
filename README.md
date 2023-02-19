@@ -4,6 +4,9 @@ bootcamp Week 11 assignment
 ## Description
 ![Readme generator Screenshot](./assets/images/screenshot.png)
 <br>
+*[Video](https://drive.google.com/file/d/1UvETX3JgLTmOJdxkCsixvBAWy5tqGC89/view)* of how to use the generator
+<br>
+
 The task was to create a readme markdown generator using javscript and node.js. The task is to allow users to quickly create a professional README for a new project.
 Some of the acceptance criteria for this project:
 
